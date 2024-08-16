@@ -33,7 +33,7 @@ session_start();
         </p>
       </div>
       <div class="p-cta-block">
-        <a href="step-1.php" class="p-button--positive">Register</a>
+        <a href="step1.php" class="p-button--positive">Register</a>
 
         <p>
             <small>
@@ -54,4 +54,3 @@ session_start();
 
 </body>
 </html>
-
