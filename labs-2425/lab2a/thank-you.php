@@ -4,14 +4,6 @@ require "helpers/helper-functions.php";
 
 session_start();
 
-$contact_number = $_POST['contact_number'];
-$program = $_POST['program'];
-$agree = $_POST['agree'];
-
-$_SESSION['contact_number'] = $contact_number;
-$_SESSION['program'] = $program;
-$_SESSION['agree'] = $agree;
-
 $form_data = $_SESSION;
 
 dump_session();
@@ -59,7 +51,6 @@ session_destroy();
             ?>
             </tbody>
         </table>
-      
 
       </div>
     </div>
