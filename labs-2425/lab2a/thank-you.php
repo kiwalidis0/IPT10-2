@@ -4,11 +4,30 @@ require "helpers/helper-functions.php";
 
 session_start();
 
+$csvData = 'registrants.csv';
+
+$data = [
+    $_SESSION['fullname'],
+    $_SESSION['birthdate'],
+    $_SESSION['age'],
+    $_SESSION['contact_number'],
+    $_SESSION['sex'],
+    $_SESSION['program'],
+    $_SESSION['address'],
+    $_SESSION['email']
+];
+
+if ($file = fopen($csvData, 'a')) {
+    fputcsv($file, $data);
+    fclose($file);
+}
+
 $form_data = $_SESSION;
 
 dump_session();
 
 session_destroy();
+
 ?>
 <html>
 <head>
@@ -51,7 +70,7 @@ session_destroy();
             ?>
             </tbody>
         </table>
-
+          
       </div>
     </div>
   </div>
